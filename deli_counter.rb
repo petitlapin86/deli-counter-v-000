@@ -19,11 +19,15 @@ count = 0
 def take_a_number(katz_deli, name)
   4.times do
   puts "Hello #{name}, you are number #{count} in line"
-  count = count+1 
+  count = count+1
 
 end
 
-def now_serving
-if
-else  puts "There is nobody waiting to be served!".
+def now_serving(katz_deli)
+  if katz_deli.empty?
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{katz_deli.first}."
+    katz_deli.shift
+  end
 end
